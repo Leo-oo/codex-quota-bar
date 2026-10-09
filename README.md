@@ -39,6 +39,6 @@ Windows 程序未签名；Mac 仅有 ad-hoc 签名，未经 Apple 公证。首�
 
 ## 许可与致谢
 
-感谢 [AIHOT](https://aihot.news/) 提供公共重置消息接口。
+感谢 [AIHOT](https://aihot.news/codex-reset) 提供公共重置消息接口。
 
 [MIT License](LICENSE)。完整上游归属与第三方许可见 [NOTICE](THIRD-PARTY-NOTICES.md)；外部服务与数据不纳入本项目 MIT 许可。
