@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Quota meter">
+  <title>Quota meter — selected option 2</title>
+  <desc>Authored geometric reconstruction of the user-selected reference. Continuous round-cap arc, filled hub and upper-right needle. No client trademark artwork.</desc>
+  <g transform="translate(0 -0.677145999)">
+    <path id="arc" d="M 18.592177832 84.354291997 A 41 41 0 1 1 81.407822168 84.354291997" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round"/>
+    <circle id="hub" cx="50" cy="58" r="8" fill="#000000"/>
+    <path id="needle" d="M 50 58 L 70 38" fill="none" stroke="#000000" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
