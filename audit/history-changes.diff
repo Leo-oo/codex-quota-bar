@@ -1,0 +1,188 @@
+--- v0.11.9/AssemblyInfo.cs
++++ v0.11.10/AssemblyInfo.cs
+@@ -2,5 +2,5 @@
+ [assembly: AssemblyTitle("Codex Usage Mini")]
+ [assembly: AssemblyProduct("Codex Usage Mini")]
+ [assembly: AssemblyDescription("Local Codex quota bar and public reset news")]
+-[assembly: AssemblyVersion("0.11.9.0")]
+-[assembly: AssemblyFileVersion("0.11.9.0")]
++[assembly: AssemblyVersion("0.11.10.0")]
++[assembly: AssemblyFileVersion("0.11.10.0")]
+--- v0.11.9/NewsDiagnostic.cs
++++ v0.11.10/NewsDiagnostic.cs
+@@ -23,7 +23,7 @@
+             var json=new JavaScriptSerializer { MaxJsonLength=8388608 };
+             string text;
+             do {
+-                text=json.Serialize(new { schema=1,version="0.11.9.0",processId=processId,startedUtc=startedUtc,events=events });
++                text=json.Serialize(new { schema=1,version="0.11.10.0",processId=processId,startedUtc=startedUtc,events=events });
+                 if(text.Length<=524288 || events.Count==1) break;
+                 events.RemoveAt(0);
+             } while(true);
+--- v0.11.9/NewsHelpPopup.cs
++++ v0.11.10/NewsHelpPopup.cs
+@@ -5,7 +5,7 @@
+ // Hover explanation only. This window never takes focus or installs another input hook.
+ internal sealed class NewsHelpPopup : Form
+ {
+-    internal const string Explanation="消息来自 AIHOT，展示公开的额度重置及重置卡活动，不代表你的账户已重置或已收到重置卡。";
++    internal const string Explanation="AIHOT公开活动不代表本人额度已重置或收到卡。历史按北京时间显示；确认时间不是实际到账时间。";
+     static readonly TextFormatFlags Flags=TextFormatFlags.WordBreak|TextFormatFlags.NoPadding|TextFormatFlags.NoPrefix;
+     Appearance appearance;
+     Font bodyFont;
+--- v0.11.9/ResetNews.cs
++++ v0.11.10/ResetNews.cs
+@@ -50,7 +50,8 @@
+         if(day.Length==0) day=Text(item,"confirmedAt");
+         if(day.Length==0) day=Text(Obj(Get(item,"estimate"))??Obj(Get(item,"schedule")),"from");
+         if(day.Length==0) day=Text(item,"createdAt");
+-        return DayOf(day);
++        DateTimeOffset exact;
++        return SourceTimestamp(day,out exact)?exact.ToOffset(TimeSpan.FromHours(8)).ToString("yyyy-MM-dd",CultureInfo.InvariantCulture):DayOf(day);
+     }
+     internal static JavaScriptSerializer Json { get { return new JavaScriptSerializer { MaxJsonLength=2097152 }; } }
+     internal static Dictionary<string,object> Obj(object v) { return v as Dictionary<string,object>; }
+@@ -90,13 +91,31 @@
+         if(item==null || item.Status!="confirmed" || item.KindExplicit!=true ||
+             (item.Type!="direct_reset" && item.Type!="reset_credit") ||
+             (item.ConfirmationBasis!="source_post" && item.ConfirmationBasis!="receipt_review")) return false;
++        if(item.TimeInferred) return false;
+         DateTime day;
+-        if(item.TimeInferred || !DateTime.TryParseExact(item.OccurredOn,"yyyy-MM-dd",CultureInfo.InvariantCulture,DateTimeStyles.None,out day)) return false;
+-        if(day<DateTime.MinValue.AddHours(8)) return false;
+-        // occurredOn is a Beijing calendar date. Retain its precision instead of
+-        // displaying the internal midnight used only to compare historical days.
+-        time=new DateTimeOffset(DateTime.SpecifyKind(day,DateTimeKind.Unspecified),TimeSpan.FromHours(8));
+-        dateOnly=true; return time<=now;
++        if(DateTime.TryParseExact(item.OccurredOn,"yyyy-MM-dd",CultureInfo.InvariantCulture,DateTimeStyles.None,out day)) {
++            if(day<DateTime.MinValue.AddHours(8)) return false;
++            time=new DateTimeOffset(DateTime.SpecifyKind(day,DateTimeKind.Unspecified),TimeSpan.FromHours(8));
++            dateOnly=true; return time<=now;
++        }
++        // A confirmation is evidence of a public event, not its exact delivery time.
++        if(SourceTimestamp(item.ConfirmedAt,out time)) { dateOnly=false; return time<=now; }
++        if(DateTime.TryParseExact(item.ConfirmedAt,"yyyy-MM-dd",CultureInfo.InvariantCulture,DateTimeStyles.None,out day) && day>=DateTime.MinValue.AddHours(8)) {
++            time=new DateTimeOffset(DateTime.SpecifyKind(day,DateTimeKind.Unspecified),TimeSpan.FromHours(8));
++            dateOnly=true; return time<=now;
++        }
++        return false;
++    }
++    static bool HasOccurrence(ResetNewsItem item)
++    {
++        DateTime day; return DateTime.TryParseExact(item.OccurredOn,"yyyy-MM-dd",CultureInfo.InvariantCulture,DateTimeStyles.None,out day);
++    }
++    static DateTimeOffset HistoryOrderTime(ResetNewsItem item,DateTimeOffset time,DateTimeOffset now)
++    {
++        DateTimeOffset confirmation;
++        if(HasOccurrence(item) && SourceTimestamp(item.ConfirmedAt,out confirmation) && confirmation<=now &&
++            confirmation.ToOffset(TimeSpan.FromHours(8)).Date==time.ToOffset(TimeSpan.FromHours(8)).Date) return confirmation;
++        return time;
+     }
+     internal static string HistoryLabel(ResetNewsItem item)
+     {
+@@ -108,8 +127,10 @@
+     {
+         DateTimeOffset time; bool dateOnly;
+         if(!HistoryTimestamp(item,DateTimeOffset.Now,out time,out dateOnly)) return "";
+-        return time.ToString("M月d日",CultureInfo.InvariantCulture);
+-    }
++        string basis=HasOccurrence(item)?"发生日期":dateOnly?"确认日期":"确认时间";
++        return time.ToOffset(TimeSpan.FromHours(8)).ToString(dateOnly?"M月d日":"M月d日 HH:mm",CultureInfo.InvariantCulture)+"（"+basis+"）";
++    }
++
+     internal static string CheckTime(string value,DateTimeOffset now)
+     {
+         DateTimeOffset time;
+@@ -125,7 +146,7 @@
+         if(Convert.ToString(Get(root,"schemaVersion"),CultureInfo.InvariantCulture)!="1" || !(Get(root,"events") is object[]))
+             throw new InvalidDataException("消息接口格式已变化");
+         string today=Text(root,"today"); if(today.Length==0) today=BeijingToday;
+-        var result=new ResetNewsSnapshot { DisplayPolicy=3,Day=today,Items=new List<ResetNewsItem>(), VerifiedAt=Text(root,"checkedAt"), Monitor=Text(Obj(Get(root,"monitor")),"status") };
++        var result=new ResetNewsSnapshot { DisplayPolicy=4,Day=today,Items=new List<ResetNewsItem>(), VerifiedAt=Text(root,"checkedAt"), Monitor=Text(Obj(Get(root,"monitor")),"status") };
+         var history=new List<ResetNewsItem>();
+         foreach(object value in ArrayOf(Get(root,"events")))
+         {
+@@ -174,13 +195,11 @@
+         foreach(var item in history) {
+             DateTimeOffset time; bool dateOnly;
+             if(!HistoryTimestamp(item,now,out time,out dateOnly)) continue;
+-            DateTimeOffset confirmation;
+-            if(!SourceTimestamp(item.ConfirmedAt,out confirmation) || confirmation>now) confirmation=default(DateTimeOffset);
+-            // Order actual occurrence days first. Confirmation only makes a same-day
+-            // choice stable; its time is never displayed as an execution timestamp.
+-            if(result.LatestHistory==null || time>latest || (time==latest &&
+-                (confirmation>latestConfirmation || (confirmation==latestConfirmation && String.CompareOrdinal(item.Id,result.LatestHistory.Id)<0)))) {
+-                result.LatestHistory=item; latest=time; latestConfirmation=confirmation;
++            DateTimeOffset order=HistoryOrderTime(item,time,now);
++            DateTimeOffset day=new DateTimeOffset(time.ToOffset(TimeSpan.FromHours(8)).Date,TimeSpan.FromHours(8));
++            if(result.LatestHistory==null || day>latest || (day==latest &&
++                (order>latestConfirmation || (order==latestConfirmation && String.CompareOrdinal(item.Id,result.LatestHistory.Id)<0)))) {
++                result.LatestHistory=item; latest=day; latestConfirmation=order;
+             }
+         }
+         result.Items.Sort((a,b)=>String.CompareOrdinal(b.Published,a.Published));
+@@ -272,11 +291,16 @@
+                 if(loaded==null || loaded.Schema!=1 || loaded.Read==null || loaded.Snapshot==null || loaded.Snapshot.Items==null ||
+                     loaded.Snapshot.Items.Exists(x=>x==null || String.IsNullOrEmpty(x.Id) || String.IsNullOrEmpty(x.Version))) throw new InvalidDataException();
+                 Cache=loaded;
+-                // Old caches did not extract the full recent history. Preserve today's
+-                // filtered content and read versions, but force a source refetch.
+-                if(Cache.Snapshot.DisplayPolicy!=3) {
+-                    if((Cache.Snapshot.DisplayPolicy!=1 && Cache.Snapshot.DisplayPolicy!=2) || Cache.Snapshot.Day!=ResetNewsParser.BeijingToday) Cache.Snapshot.Items.Clear();
+-                    Cache.Snapshot.LatestHistory=null;
++                // Policy 3 already held filtered activities and validated history.
++                // Preserve those during an offline upgrade, but force a source refetch
++                // because its historical candidates may have been incomplete.
++                if(Cache.Snapshot.DisplayPolicy!=4) {
++                    if(Cache.Snapshot.DisplayPolicy!=3) {
++                        if((Cache.Snapshot.DisplayPolicy!=1 && Cache.Snapshot.DisplayPolicy!=2) || Cache.Snapshot.Day!=ResetNewsParser.BeijingToday) Cache.Snapshot.Items.Clear();
++                        Cache.Snapshot.LatestHistory=null;
++                    } else if(String.IsNullOrEmpty(ResetNewsParser.HistoryLabel(Cache.Snapshot.LatestHistory))) {
++                        Cache.Snapshot.LatestHistory=null;
++                    }
+                     Cache.ETag=null;
+                 }
+                 MigrateReadVersions();
+--- v0.11.9/ResetNewsChecks.cs
++++ v0.11.10/ResetNewsChecks.cs
+@@ -177,7 +177,7 @@
+             historical("newer-occurrence","reset_credit","confirmed",true,"2026-10-03T12:00:00+08:00","2026-10-03",false)
+         }).LatestHistory.Id=="newer-occurrence");
+         check("same-day candidates select one stable record without claiming an execution time",latestHistory.LatestHistory.Id=="last-grant" &&
+-            ResetNewsParser.HistoryTime(latestHistory.LatestHistory)=="10月3日");
++            ResetNewsParser.HistoryTime(latestHistory.LatestHistory)=="10月3日（发生日期）");
+         var unknownHistory=historyParse(new[]{
+             historical("unknown-form","direct_reset","confirmed",false,"2026-10-03T13:00:00+08:00","2026-10-03",false),
+             historical("unknown-type","future_kind","confirmed",true,"2026-10-03T14:00:00+08:00","2026-10-03",false),
+@@ -195,16 +195,16 @@
+         check("inferred dates are not explicit historical occurrences",historyParse(new[]{
+             historical("inferred-day","reset_credit","confirmed",true,null,"2026-09-30",true)
+         }).LatestHistory==null);
+-        check("confirmation timestamps of any precision cannot replace missing occurrence dates",historyParse(new[]{
++        check("reliable confirmation fallback preserves source meaning",historyParse(new[]{
+             historical("date-in-timestamp","direct_reset","confirmed",true,"2026-09-30",null,false),
+             historical("no-zone","direct_reset","confirmed",true,"2026-09-30T12:00:00",null,false),
+             historical("exact-confirmation-only","direct_reset","confirmed",true,"2026-09-30T12:00:00+08:00",null,false)
+-        }).LatestHistory==null);
++        }).LatestHistory.Id=="exact-confirmation-only");
+         var dateHistory=historyParse(new[]{historical("known-day","reset_credit","confirmed",true,null,"2026-09-30",false)});
+-        check("historical date-only precision is retained without midnight",dateHistory.LatestHistory!=null && ResetNewsParser.HistoryTime(dateHistory.LatestHistory)=="9月30日");
++        check("historical date-only precision is retained without midnight",dateHistory.LatestHistory!=null && ResetNewsParser.HistoryTime(dateHistory.LatestHistory)=="9月30日（发生日期）");
+         var timestampHistory=historyParse(new[]{historical("known-day-with-confirmation","direct_reset","confirmed",true,"2026-10-03T05:18:00+08:00","2026-10-03",false)});
+         check("confirmation HH:mm is not displayed as an occurrence time",ResetNewsParser.HistoryLabel(timestampHistory.LatestHistory)=="上次额度重置" &&
+-            ResetNewsParser.HistoryTime(timestampHistory.LatestHistory)=="10月3日");
++            ResetNewsParser.HistoryTime(timestampHistory.LatestHistory)=="10月3日（发生日期）");
+         var missingBasis=historyParse(new object[]{new {id="no-basis",type="direct_reset",status="confirmed",confirmedAt="2026-10-03T05:18:00+08:00",occurredOn="2026-10-03",presentation=new {kindExplicit=true}}});
+         check("history requires a known confirmation basis",missingBasis.LatestHistory==null);
+         var withdrawnHistory=ResetNewsParser.Parse(ResetNewsParser.Json.Serialize(new {
+--- v0.11.9/UsageMini.cs
++++ v0.11.10/UsageMini.cs
+@@ -978,7 +978,7 @@
+         positionCommandCount++;
+         var navigation=sidebarState.Snapshot;
+         var record=new {
+-            version="0.11.9.0",utc=DateTime.UtcNow.ToString("o"),count=positionCommandCount,
++            version="0.11.10.0",utc=DateTime.UtcNow.ToString("o"),count=positionCommandCount,
+             previousDip=previousDip,requestedDip=requestedDip,desiredDip=PositionOffsetDip,
+             accepted=accepted,saveAttempted=accepted&&persistPlacement,
+             saved=accepted&&persistPlacement&&LastPositionSaveSucceeded,conflict=positionConflict,

@@ -1,0 +1,751 @@
+{
+  "schema": 1,
+  "auditDateUtc": "2026-10-09",
+  "programVersion": "0.11.10.0",
+  "status": "STATIC_SOURCE_MEDIA_AND_NEW_EXE_REVIEW_COMPLETE",
+  "scope": {
+    "activity": "Static source, hash and media inspection for this 0.11.10 copy.",
+    "applicationExecuted": false,
+    "buildsOrProductTestsRunByAuditor": false,
+    "authenticationOrRuntimeDataRead": false,
+    "realCodexUiOrMacProjectAccessed": false,
+    "privateReferencePixelsReadByAuditor": false,
+    "githubWritesPerformed": false
+  },
+  "disposition": {
+    "unchanged119IconAssets": "PASS; current copy independently compared",
+    "oldExtractedClientIconRemovalInNewExe": "PASS; two known archived ICOs and all sixteen frame payloads absent",
+    "wholeProjectMITGrantApplied": false,
+    "overallProjectLicense": "USER DECISION PENDING",
+    "publicPublicationAllowed": false
+  },
+  "upstreamNotice": {
+    "file": "licenses/LICENSE.upstream.txt",
+    "sha256": "c5a050a127c2ee82ab78147bb1c980641dd2ae9329fe83bfc614833ee46636fc",
+    "copyright": "Copyright (c) 2026 Zoey Liew",
+    "license": "MIT for declared upstream adapted material",
+    "sourceHeaderReferences": [
+      "windows/src/UsageMini.cs:1",
+      "windows/src/UsageMini.cs:2"
+    ],
+    "noticePreserved": true,
+    "boundary": "This upstream notice does not automatically license the project's additions or new artwork."
+  },
+  "sourceChangeReview": {
+    "baseline": "Frozen 0.11.9 icon-2 source; this is a new comparison, not reuse of its audit result.",
+    "sourceCount": 34,
+    "unchangedSourceCount": 27,
+    "changedSources": [
+      "windows/src/AssemblyInfo.cs",
+      "windows/src/NewsDiagnostic.cs",
+      "windows/src/NewsHelpPopup.cs",
+      "windows/src/ResetNews.cs",
+      "windows/src/ResetNewsChecks.cs",
+      "windows/src/UsageMini.cs",
+      "windows/src/VisualChecks.cs"
+    ],
+    "versionOnlySources": [
+      "windows/src/AssemblyInfo.cs",
+      "windows/src/NewsDiagnostic.cs",
+      "windows/src/UsageMini.cs"
+    ],
+    "historyChanges": "History time/date selection and display-policy migration; policy-3 valid offline history and cross-day messages retained while ETag is cleared; corresponding checks and help text.",
+    "privateDesignIdentifierRemoval": "VisualChecks private Library identifier replaced with a neutral marker.",
+    "quotaInputMenuAndIconSourcesUnchanged": true,
+    "hashComparison": [
+      {
+        "file": "windows/src/Appearance.cs",
+        "sha256": "617b4268dbbbd92351aba3a69d67ca56a77502557ba9003b21f22dca97c1b96f",
+        "baseline119Sha256": "617b4268dbbbd92351aba3a69d67ca56a77502557ba9003b21f22dca97c1b96f",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/AssemblyInfo.cs",
+        "sha256": "3e7797cdace33d62ec28a859c7f9ee1bfc530dbf5c60a9542f32ebacebda62ce",
+        "baseline119Sha256": "acb114033627b1c37d0cfbfdec5beb8d0f939af4f15f02b683b2318d4a2c9142",
+        "unchanged": false
+      },
+      {
+        "file": "windows/src/DataChecks.cs",
+        "sha256": "68e407c32d2b992b1b44e76d8dd18b1e27aaf3b6f247627fdf51229c0f645d18",
+        "baseline119Sha256": "68e407c32d2b992b1b44e76d8dd18b1e27aaf3b6f247627fdf51229c0f645d18",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/DetailsPopup.cs",
+        "sha256": "56147396311a30093a33d6714f98aa5ca9058ce0125aecdb3fda66fb52825839",
+        "baseline119Sha256": "56147396311a30093a33d6714f98aa5ca9058ce0125aecdb3fda66fb52825839",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/EntryInput.cs",
+        "sha256": "303c447cda610e7aebb7bcc7cd60cc4efd1ba1d3c168180d448a50085807262a",
+        "baseline119Sha256": "303c447cda610e7aebb7bcc7cd60cc4efd1ba1d3c168180d448a50085807262a",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/LayeredEntrySurface.cs",
+        "sha256": "3fb3fb2e7e417fe2d16c4c6e7394ee469060dca842b6f234cfb356efd4dde129",
+        "baseline119Sha256": "3fb3fb2e7e417fe2d16c4c6e7394ee469060dca842b6f234cfb356efd4dde129",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/LifecycleChecks.cs",
+        "sha256": "5f837d3dc6ff648ca991bf574ba3d56116c0891a2dd56d9e70feef38b0efd7fa",
+        "baseline119Sha256": "5f837d3dc6ff648ca991bf574ba3d56116c0891a2dd56d9e70feef38b0efd7fa",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/MenuDismissal.cs",
+        "sha256": "d90f2bc99ab73aa12c28d2220aafac1221c937941fb32286187007a1dfd48fa9",
+        "baseline119Sha256": "d90f2bc99ab73aa12c28d2220aafac1221c937941fb32286187007a1dfd48fa9",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/MiniChrome.cs",
+        "sha256": "491381a2f160c8581bd42d41362fabda54d8064db2136fbd60d9de8dc6fd2344",
+        "baseline119Sha256": "491381a2f160c8581bd42d41362fabda54d8064db2136fbd60d9de8dc6fd2344",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/NativeTrayAssets.cs",
+        "sha256": "541f4ede81bc99f6761884dea294f01fdd61a861ce3fc212caed99623cd82e04",
+        "baseline119Sha256": "541f4ede81bc99f6761884dea294f01fdd61a861ce3fc212caed99623cd82e04",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/NavigationGeometry.cs",
+        "sha256": "db88afa875cdb4111ad318afb7eeb8b6a9085d05299ce0a08e072ca8162f8294",
+        "baseline119Sha256": "db88afa875cdb4111ad318afb7eeb8b6a9085d05299ce0a08e072ca8162f8294",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/NewsDiagnostic.cs",
+        "sha256": "7bbde4f3e8521470eb0d1ff4eca24eb32a94a4ab80e28cf479a9a2936bf8b003",
+        "baseline119Sha256": "6c0402a3f69a7ab40f15fbbc2735525724f3c99a92854cdded4dc12259b53b48",
+        "unchanged": false
+      },
+      {
+        "file": "windows/src/NewsHelpPopup.cs",
+        "sha256": "379838db5b85a8341cc98852eb45f7538242f27ba482833d3247c8bd386ebbdc",
+        "baseline119Sha256": "cb31b9365191af9f79bd889e864c1c13695079ed73d1cf8a99bd82bd4c6dd29d",
+        "unchanged": false
+      },
+      {
+        "file": "windows/src/OrphanTrayChecks.cs",
+        "sha256": "4b48d6e17a636b5e0a0847071ac11478710d1f0a0b679149ede2f45bb89c4245",
+        "baseline119Sha256": "4b48d6e17a636b5e0a0847071ac11478710d1f0a0b679149ede2f45bb89c4245",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/PopupPlacement.cs",
+        "sha256": "bc72ff5f1bae97b366f43f1008c39c0698ba23f10f3d5ab6ecc1dfae28688250",
+        "baseline119Sha256": "bc72ff5f1bae97b366f43f1008c39c0698ba23f10f3d5ab6ecc1dfae28688250",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/PositionTrace.cs",
+        "sha256": "e6f7dfc0da774b0b275f617a35ada2d3e1cdd0a31f31fac180671273ff7609a9",
+        "baseline119Sha256": "e6f7dfc0da774b0b275f617a35ada2d3e1cdd0a31f31fac180671273ff7609a9",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/ProcessJob.cs",
+        "sha256": "ce70c92c5d8f97f3bc6192b3abb7539ab94569e94362f3e4812448c84d5962e4",
+        "baseline119Sha256": "ce70c92c5d8f97f3bc6192b3abb7539ab94569e94362f3e4812448c84d5962e4",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/QuotaClient.cs",
+        "sha256": "537787adc9957cd6316ecf72c3e76df2388e6b549bef61caf9ec194c9ff7c4ba",
+        "baseline119Sha256": "537787adc9957cd6316ecf72c3e76df2388e6b549bef61caf9ec194c9ff7c4ba",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/QuotaDetails.cs",
+        "sha256": "e082770f699875fee0a3ce9237ebd6cb69b6821da5f30ace75a814737a31a8c6",
+        "baseline119Sha256": "e082770f699875fee0a3ce9237ebd6cb69b6821da5f30ace75a814737a31a8c6",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/RailLayout.cs",
+        "sha256": "6933ddb0b074b378bffdeb8e4f197de31ae9d8dbf9456fc0d73dc67c30409349",
+        "baseline119Sha256": "6933ddb0b074b378bffdeb8e4f197de31ae9d8dbf9456fc0d73dc67c30409349",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/ResetNews.cs",
+        "sha256": "37996ac93d2241adb61353c65b0f429fd307f56563dd367d538097c3beef600f",
+        "baseline119Sha256": "e8242ed4d938bd8598bf91dd8e751b7b9a0c23be16e1981d4428497cb5d06aaf",
+        "unchanged": false
+      },
+      {
+        "file": "windows/src/ResetNewsCard.cs",
+        "sha256": "e65cd31bcdaaa258e2675b5bc7aed8d71b7a551f37005d1daeb420f93d55d9d3",
+        "baseline119Sha256": "e65cd31bcdaaa258e2675b5bc7aed8d71b7a551f37005d1daeb420f93d55d9d3",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/ResetNewsChecks.cs",
+        "sha256": "97bdce17125ed6ddb76f728181a6eac0a8ebc66efbc39ab1364cd0726a5a9bbe",
+        "baseline119Sha256": "27f2b29f620ee68549b0f4bf04c719df7babfa32035e38d4c3cb6a0febc86f07",
+        "unchanged": false
+      },
+      {
+        "file": "windows/src/ResetNewsPresentation.cs",
+        "sha256": "56e6bad56ba7f09ecaf0f6e04aea3451634175d49eb3b61fc342c721f0eed2e3",
+        "baseline119Sha256": "56e6bad56ba7f09ecaf0f6e04aea3451634175d49eb3b61fc342c721f0eed2e3",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/SidebarState.cs",
+        "sha256": "c5f70383b4dc868a82f218d2f89d2b0f4aab3d00608edf73b670bf9673636f5c",
+        "baseline119Sha256": "c5f70383b4dc868a82f218d2f89d2b0f4aab3d00608edf73b670bf9673636f5c",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/SoftShadow.cs",
+        "sha256": "3f9167a487311fdf0b6b8b174861c872fa026a786d2748e06c5d025a5a5bb440",
+        "baseline119Sha256": "3f9167a487311fdf0b6b8b174861c872fa026a786d2748e06c5d025a5a5bb440",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/SubmenuPlacement.cs",
+        "sha256": "9538a5ec6e71d535430aeb6a4301f784e98ee9cde471fb213aecd481d9ef517f",
+        "baseline119Sha256": "9538a5ec6e71d535430aeb6a4301f784e98ee9cde471fb213aecd481d9ef517f",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/TooltipHover.cs",
+        "sha256": "1023edafea75687959c69b6f19d0c98377e08a01e4d546282c41a736e0f0af40",
+        "baseline119Sha256": "1023edafea75687959c69b6f19d0c98377e08a01e4d546282c41a736e0f0af40",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/UiPlacementPreferences.cs",
+        "sha256": "7d25081026c395ca4c985878a3605f9aa1581229149611405631f7221077f5ac",
+        "baseline119Sha256": "7d25081026c395ca4c985878a3605f9aa1581229149611405631f7221077f5ac",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/UiStateChecks.cs",
+        "sha256": "8b58dcf9568e5d4f45659911e1e15186498ce8af00a92959a48f0cff285cf37b",
+        "baseline119Sha256": "8b58dcf9568e5d4f45659911e1e15186498ce8af00a92959a48f0cff285cf37b",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/UiTypography.cs",
+        "sha256": "4db231a75b9379d82288e3568614670f6e18e7086c9de157d1c9cb5a80f926ff",
+        "baseline119Sha256": "4db231a75b9379d82288e3568614670f6e18e7086c9de157d1c9cb5a80f926ff",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/UsageMini.cs",
+        "sha256": "b03d0138f572ba5dcc3a4801d1b532d33a41ffd7c779738236f04cd6f8d4298f",
+        "baseline119Sha256": "b9fc4f654959e441f3ede777b3b647db244589721b8f444f2bc8c54e2bfd1b9b",
+        "unchanged": false
+      },
+      {
+        "file": "windows/src/UsageSurface.cs",
+        "sha256": "803625638f0ebfe43c4030e9f166fe8dabead28d9f2f413dee8627a68f2ded1c",
+        "baseline119Sha256": "803625638f0ebfe43c4030e9f166fe8dabead28d9f2f413dee8627a68f2ded1c",
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/VisualChecks.cs",
+        "sha256": "151c804483b377a33906c473473e5ae13feb3ab588504715c07ab8e2ccb72c31",
+        "baseline119Sha256": "412258fa81b1cf85c6c243f3db3beb4cd75b7680aa4ff8a3b42adaba96a2bd35",
+        "unchanged": false
+      }
+    ],
+    "all34HashesMatchFrozen110Baseline": true,
+    "frozenBaseline": {
+      "file": "audit/baseline.json",
+      "sha256": "5eb135251ae7df6fffdba8a78955f59a7f27c99e4fea93d3689ff33f670e6d3d"
+    },
+    "visualChecksChanges": "Removed private design identifier and synchronized help wording/expectations; no icon behavior change."
+  },
+  "assetComparison": {
+    "baseline": "Frozen 0.11.9 icon-2 media",
+    "currentSharedFilesCompared": 52,
+    "currentIcosCompared": 3,
+    "allCurrentSharedAndIcoHashesMatch119": true,
+    "nonRasterRecords": [
+      {
+        "file": "shared/icons/asset-manifest.json",
+        "sha256": "8411669cf6753b385c32a80cc0b1f26105e061c0a223d03b32886a6182fcac07",
+        "bytes": 17982,
+        "unchanged": true
+      },
+      {
+        "file": "shared/icons/geometry.json",
+        "sha256": "fb1fa6f61645346cc2098d7fba135ed0210f3166b34226e50d394b921b80be5b",
+        "bytes": 706,
+        "unchanged": true
+      },
+      {
+        "file": "shared/icons/provenance.json",
+        "sha256": "2c2b4f733af217576f50c89ce2d9e9fc65fcf61027d46cd23fdaa1960bc7708b",
+        "bytes": 1075,
+        "unchanged": true
+      },
+      {
+        "file": "shared/icons/quota-mark-black.svg",
+        "sha256": "92ab3f524fe6f8bd15f10173ce2a0704984f5b6f4635735233aa2cf9975875d8",
+        "bytes": 739,
+        "unchanged": true
+      },
+      {
+        "file": "shared/icons/quota-mark-white.svg",
+        "sha256": "73d7e34e5b15bcdc51d3c02e0cc39f61ebe27057c5375abe20d2f9e50166a849",
+        "bytes": 739,
+        "unchanged": true
+      },
+      {
+        "file": "shared/icons/README.md",
+        "sha256": "d1d62b379c49f1f14991cff041ebaf56a9328817fd447ace609114277075eee3",
+        "bytes": 2474,
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/assets/quota-app.ico",
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "bytes": 316902,
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/assets/quota-tray-dark.ico",
+        "sha256": "d18bc6f54f13b20585ddb427d6495dd887e95fa7d54919ed05d893a271c027ba",
+        "bytes": 316902,
+        "unchanged": true
+      },
+      {
+        "file": "windows/src/assets/quota-tray-light.ico",
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "bytes": 316902,
+        "unchanged": true
+      }
+    ],
+    "manifest": {
+      "manifestPath": "shared/icons/asset-manifest.json",
+      "manifestSha256": "8411669cf6753b385c32a80cc0b1f26105e061c0a223d03b32886a6182fcac07",
+      "recordCount": 53,
+      "allSizesAndHashesMatch": true,
+      "failures": [],
+      "svgInspection": [
+        {
+          "file": "shared/icons/quota-mark-black.svg",
+          "sha256": "92ab3f524fe6f8bd15f10173ce2a0704984f5b6f4635735233aa2cf9975875d8",
+          "elementCounts": {
+            "circle": 1,
+            "desc": 1,
+            "g": 1,
+            "path": 2,
+            "svg": 1,
+            "title": 1
+          },
+          "embeddedMediaElements": [],
+          "hrefOrSrcAttributeCount": 0,
+          "geometryOnly": true
+        },
+        {
+          "file": "shared/icons/quota-mark-white.svg",
+          "sha256": "73d7e34e5b15bcdc51d3c02e0cc39f61ebe27057c5375abe20d2f9e50166a849",
+          "elementCounts": {
+            "circle": 1,
+            "desc": 1,
+            "g": 1,
+            "path": 2,
+            "svg": 1,
+            "title": 1
+          },
+          "embeddedMediaElements": [],
+          "hrefOrSrcAttributeCount": 0,
+          "geometryOnly": true
+        }
+      ],
+      "mediaCount": 51,
+      "referenceOriginalHashMatches": []
+    }
+  },
+  "artworkProvenance": {
+    "sourceRecord": "shared/icons/provenance.json",
+    "geometryRecord": "shared/icons/geometry.json",
+    "description": "Authored round-cap continuous arc, filled hub and upper-right needle; black/white geometry.",
+    "reference": {
+      "basename": "ChatGPT 图像 2026年10月9日 03_24_48.png",
+      "sha256": "cf6bfafb80b8dc13f68f2f26d9d2d0f762fc5aa2bca2d435dacaaeac52f7ad40",
+      "originalMediaNotCopied": true,
+      "privateReferenceWasNotOpenedByAuditor": true
+    },
+    "boundary": "The producer's implementation authorization and provenance do not grant rights to redistribute the private reference original or apply MIT to all project material."
+  },
+  "dependencies": {
+    "bundledFontsOrSystemDlls": false,
+    "bundledCodexClientOrCli": false,
+    "handDrawnUiGlyphs": "Application-drawn geometry; no external font assets copied.",
+    "runtimeNews": "External public endpoint; no actual source response/cache included in this repository."
+  },
+  "binaryResourceInspection": {
+    "activity": "static bytes only; executable not run",
+    "exeSha256": "f0f7090202bf196ce7a969bdc3b4c1e03d66181182798c9b591d1c8a6fa709f7",
+    "exeBytes": 1326592,
+    "machine": "0x8664",
+    "peMagic": "0x20b",
+    "assemblyVersion": "0.11.10.0",
+    "sourceIcos": [
+      {
+        "file": "windows/src/assets/quota-app.ico",
+        "bytes": 316902,
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "frames": [
+          {
+            "width": 16,
+            "height": 16,
+            "bytes": 1128,
+            "sha256": "5d282c8dc8eea3a24aac6d627ba213cf05c7adb263e23ef1c6897dd10f320d9b"
+          },
+          {
+            "width": 18,
+            "height": 18,
+            "bytes": 1408,
+            "sha256": "90b8da4fdd165abcecea5123b2cf587233262b7403c291f46a8e167ff536df91"
+          },
+          {
+            "width": 20,
+            "height": 20,
+            "bytes": 1720,
+            "sha256": "2ad55fcbd7d61b85cf90cddb4acd1ad9c276bec1e864e3a3641ec3efd588ffc1"
+          },
+          {
+            "width": 22,
+            "height": 22,
+            "bytes": 2064,
+            "sha256": "882ab10404a95a51c5730b73ebbd7b23cd9c5864d2196f2a48d70247d1aa898f"
+          },
+          {
+            "width": 24,
+            "height": 24,
+            "bytes": 2440,
+            "sha256": "ffb87d9329343b932b0cb11f1efaf8db69d2a5182648e0bd70d17e8cbc555d40"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bytes": 4264,
+            "sha256": "87099136c8e077b85fbed9a4a96c5b0b5c70122925240f7afe0d47fae81d34b9"
+          },
+          {
+            "width": 40,
+            "height": 40,
+            "bytes": 6760,
+            "sha256": "dd13d6c621997a23b3514359bbe633ba391cf45f5e57e51fd5cbf9eee19166b8"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bytes": 9640,
+            "sha256": "d183b636251c0c05267acb44c361ace5a476e04302854c76ec511d7db47a8b73"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bytes": 16936,
+            "sha256": "ac2897026ad3e9827ea092c161d7f8e7520adde6b9526d76efa9eb7aa305a565"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "bytes": 270376,
+            "sha256": "24612e27f07b3d23da65a473b33cbb381be35d62fbf0c09dc6640368335b8865"
+          }
+        ]
+      },
+      {
+        "file": "windows/src/assets/quota-tray-dark.ico",
+        "bytes": 316902,
+        "sha256": "d18bc6f54f13b20585ddb427d6495dd887e95fa7d54919ed05d893a271c027ba",
+        "frames": [
+          {
+            "width": 16,
+            "height": 16,
+            "bytes": 1128,
+            "sha256": "36e86db4a833a3ece4f6f725c469c340266f285ff4eb3863fbb2e8a335905499"
+          },
+          {
+            "width": 18,
+            "height": 18,
+            "bytes": 1408,
+            "sha256": "8ec3e7f256875d90c669e2c889adbbe28ff126aa9a7dd20489e5a14780a716aa"
+          },
+          {
+            "width": 20,
+            "height": 20,
+            "bytes": 1720,
+            "sha256": "0c9eca0c6432a5addb3f2ff4262dbc40935e0ddc181932e24e11329ea8043c4a"
+          },
+          {
+            "width": 22,
+            "height": 22,
+            "bytes": 2064,
+            "sha256": "4f776af4f2e76bfef51a19f56d80dd5c0a15abe8c36b70097a3405252b1acb72"
+          },
+          {
+            "width": 24,
+            "height": 24,
+            "bytes": 2440,
+            "sha256": "b2da4c7351ca949d660c04663c0116fd6d884c3325c4e5c62ca454a1f90d7b0d"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bytes": 4264,
+            "sha256": "2d5e80c2dde5908aef3560580f28f4182a0774e719d98bc4663444cbf94535e0"
+          },
+          {
+            "width": 40,
+            "height": 40,
+            "bytes": 6760,
+            "sha256": "d5648f865e01e8890bdb792132f8a3216b606efe03140aa20e8a3c77fad19a74"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bytes": 9640,
+            "sha256": "c4996afa10cdb1f128ab5877e585960580b9dac32be585c33fc858d8ae4436ae"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bytes": 16936,
+            "sha256": "316d75acc49731042c2c9af1ed1837b53b0127022821e72b9c5fbca43cd32ed9"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "bytes": 270376,
+            "sha256": "de561219d70e4e07c9e6a52b01deb7b469accd8b7b17aad23efdaa6e10b729da"
+          }
+        ]
+      },
+      {
+        "file": "windows/src/assets/quota-tray-light.ico",
+        "bytes": 316902,
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "frames": [
+          {
+            "width": 16,
+            "height": 16,
+            "bytes": 1128,
+            "sha256": "5d282c8dc8eea3a24aac6d627ba213cf05c7adb263e23ef1c6897dd10f320d9b"
+          },
+          {
+            "width": 18,
+            "height": 18,
+            "bytes": 1408,
+            "sha256": "90b8da4fdd165abcecea5123b2cf587233262b7403c291f46a8e167ff536df91"
+          },
+          {
+            "width": 20,
+            "height": 20,
+            "bytes": 1720,
+            "sha256": "2ad55fcbd7d61b85cf90cddb4acd1ad9c276bec1e864e3a3641ec3efd588ffc1"
+          },
+          {
+            "width": 22,
+            "height": 22,
+            "bytes": 2064,
+            "sha256": "882ab10404a95a51c5730b73ebbd7b23cd9c5864d2196f2a48d70247d1aa898f"
+          },
+          {
+            "width": 24,
+            "height": 24,
+            "bytes": 2440,
+            "sha256": "ffb87d9329343b932b0cb11f1efaf8db69d2a5182648e0bd70d17e8cbc555d40"
+          },
+          {
+            "width": 32,
+            "height": 32,
+            "bytes": 4264,
+            "sha256": "87099136c8e077b85fbed9a4a96c5b0b5c70122925240f7afe0d47fae81d34b9"
+          },
+          {
+            "width": 40,
+            "height": 40,
+            "bytes": 6760,
+            "sha256": "dd13d6c621997a23b3514359bbe633ba391cf45f5e57e51fd5cbf9eee19166b8"
+          },
+          {
+            "width": 48,
+            "height": 48,
+            "bytes": 9640,
+            "sha256": "d183b636251c0c05267acb44c361ace5a476e04302854c76ec511d7db47a8b73"
+          },
+          {
+            "width": 64,
+            "height": 64,
+            "bytes": 16936,
+            "sha256": "ac2897026ad3e9827ea092c161d7f8e7520adde6b9526d76efa9eb7aa305a565"
+          },
+          {
+            "width": 256,
+            "height": 256,
+            "bytes": 270376,
+            "sha256": "24612e27f07b3d23da65a473b33cbb381be35d62fbf0c09dc6640368335b8865"
+          }
+        ]
+      }
+    ],
+    "managedResources": [
+      {
+        "name": "QuotaBar.Tray.Dark.ico",
+        "flags": 1,
+        "embedded": true,
+        "bytes": 316902,
+        "sha256": "d18bc6f54f13b20585ddb427d6495dd887e95fa7d54919ed05d893a271c027ba",
+        "sourceAsset": "windows/src/assets/quota-tray-dark.ico",
+        "matchesCurrentSourceIco": true
+      },
+      {
+        "name": "QuotaBar.Tray.Light.ico",
+        "flags": 1,
+        "embedded": true,
+        "bytes": 316902,
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "sourceAsset": "windows/src/assets/quota-tray-light.ico",
+        "matchesCurrentSourceIco": true
+      }
+    ],
+    "nativeResourceTypes": [
+      3,
+      14,
+      16,
+      24
+    ],
+    "nativeIconGroups": [
+      {
+        "path": [
+          14,
+          32512,
+          0
+        ],
+        "frameCount": 10,
+        "frames": [
+          {
+            "resourceId": 2,
+            "width": 16,
+            "height": 16,
+            "expectedBytes": 1128,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 3,
+            "width": 18,
+            "height": 18,
+            "expectedBytes": 1408,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 4,
+            "width": 20,
+            "height": 20,
+            "expectedBytes": 1720,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 5,
+            "width": 22,
+            "height": 22,
+            "expectedBytes": 2064,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 6,
+            "width": 24,
+            "height": 24,
+            "expectedBytes": 2440,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 7,
+            "width": 32,
+            "height": 32,
+            "expectedBytes": 4264,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 8,
+            "width": 40,
+            "height": 40,
+            "expectedBytes": 6760,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 9,
+            "width": 48,
+            "height": 48,
+            "expectedBytes": 9640,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 10,
+            "width": 64,
+            "height": 64,
+            "expectedBytes": 16936,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          },
+          {
+            "resourceId": 11,
+            "width": 256,
+            "height": 256,
+            "expectedBytes": 270376,
+            "resourceBytesMatch": true,
+            "matchesCurrentAppIcoFrame": true
+          }
+        ]
+      }
+    ],
+    "oldAssetRemoval": [
+      {
+        "name": "chatgpt-tray-dark.ico",
+        "bytes": 313398,
+        "sha256": "d0056c53538a24ab84f2dabda1af50c882d3ba58c7fc2402d75f2f0f7cf8ada9",
+        "completeIcoBytesFoundInNewExe": false,
+        "oldFramePayloadCount": 8,
+        "oldFramePayloadsFoundInNewExe": 0,
+        "oldMediaPayloadsFoundInNewStandaloneMedia": []
+      },
+      {
+        "name": "chatgpt-tray-light.ico",
+        "bytes": 313398,
+        "sha256": "44f1962e24fe042af9aea12f4c90f657234a7bb78487d18aa60af6b2a9bfbd0e",
+        "completeIcoBytesFoundInNewExe": false,
+        "oldFramePayloadCount": 8,
+        "oldFramePayloadsFoundInNewExe": 0,
+        "oldMediaPayloadsFoundInNewStandaloneMedia": []
+      }
+    ],
+    "onlyExpectedManagedTrayResourceNames": true,
+    "allManagedTrayResourcesMatchCurrentIcos": true,
+    "nativeProgramIconMatchesCurrentAppIco": true,
+    "oldKnownIcosAndFramesAbsent": true,
+    "fileVersion": "0.11.10.0",
+    "productVersion": "0.11.10.0"
+  },
+  "limitations": [
+    "Hash equality proves byte identity to the reviewed 0.11.9 icon assets; asset generation is not rerun for this history fix.",
+    "Licensing choices and public publication approval remain separate user decisions.",
+    "No normal application, real account, authenticated file, live Codex UI or Mac project was accessed.",
+    "Old-icon removal is a byte-level comparison against the two identified archived ICOs and their frame payloads, rather than an unrestricted claim about every possible third-party mark."
+  ]
+}
+

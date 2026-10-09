@@ -1,0 +1,934 @@
+{
+  "schema": 1,
+  "auditDateUtc": "2026-10-09",
+  "programVersion": "0.11.10.0",
+  "scope": {
+    "repository": "0.11.10 Windows source and shared-media candidate only",
+    "applicationExecuted": false,
+    "realCodexUiOrMacProjectAccessed": false,
+    "authenticationOrRuntimeDataRead": false,
+    "networkRequested": false,
+    "githubWritesPerformed": false,
+    "privateReferencePixelsReadByAuditor": false
+  },
+  "result": {
+    "privacyPatternAndRepositoryContentReview": "PASS",
+    "actionableMatches": 0,
+    "readErrors": 0,
+    "uninspectedBinaryFiles": 0,
+    "excludedStateEntries": 0,
+    "textFilesScanned": 78,
+    "icoFilesInspected": 3,
+    "pngFilesInspected": 46,
+    "svgFilesInspected": 2,
+    "rawEmailShapeMatches": 16,
+    "reviewedExactSuppressions": 16
+  },
+  "method": {
+    "scanner": "audit/scan_privacy.py",
+    "command": "python audit/scan_privacy.py . --scope all",
+    "scriptWritesState": false,
+    "matchedValuesPrinted": false,
+    "exactSuppressionsOnly": true,
+    "currentManifestExactLineSuppressions": 15,
+    "safeLinkNegativeFixtureExactLineSuppressions": 1,
+    "oldCopyrightJsonSuppressionsRemoved": 10,
+    "selfReportExclusion": "The scanner and its privacy reports exclude themselves from the automated sweep and are manually checked.",
+    "scannerSha256": "044d7c863225df0f207a59892a2c60ebdd85dfe8d926d7217ed47cf816a366d4"
+  },
+  "manualReview": {
+    "all34CurrentSourceHashesMatchFrozen110Baseline": true,
+    "all55SharedAndIcoHashesMatch119": true,
+    "allAssetManifest53SizeAndHashRecordsMatch": true,
+    "privateOriginalReferenceRead": false,
+    "knownReferenceHashMatchesInPublicMedia": [],
+    "actualAuthenticationFilesOrDatabasesInPublicRepository": false,
+    "privateIncomingDiffRemovedByOwner": true,
+    "publicHistoryChangesDiffDoesNotContainPrivateLibraryIdentifier": true,
+    "copyrightReportFinalized": true,
+    "oldKnownICOAnd16FramePayloadsAbsentFromNewExe": true,
+    "exeLiteralStringCheck": {
+      "literalUserStringCount": 1422,
+      "metadataStreams": [
+        "#Blob",
+        "#GUID",
+        "#Strings",
+        "#US",
+        "#~"
+      ],
+      "debugPathOrSecretPatternCounts": {
+        "personal_absolute_path": 0,
+        "private_library_identifier": 0,
+        "provider_token": 0,
+        "private_key_header": 0,
+        "jwt": 0
+      }
+    },
+    "pngAndIcoSelectedBinaryPatternsAllZero": true,
+    "pngAndIcoTextMetadataAbsent": true,
+    "bothSvgGeometryOnlyWithoutAssetReferences": true,
+    "ownedAuditFilesManuallyCheckedAfterWrite": true
+  },
+  "initialScan": {
+    "note": "Early scan before final source/docs freeze; retained for transparency, not final evidence.",
+    "textFileCount": 61,
+    "rawPatternCounts": {
+      "personal_absolute_path": 0,
+      "private_key_header": 0,
+      "provider_token": 0,
+      "jwt": 0,
+      "secret_literal_assignment": 0,
+      "email_literal": 16,
+      "credential_url": 0,
+      "credential_url_parameter": 0
+    },
+    "actionablePatternCounts": {
+      "personal_absolute_path": 0,
+      "private_key_header": 0,
+      "provider_token": 0,
+      "jwt": 0,
+      "secret_literal_assignment": 0,
+      "email_literal": 0,
+      "credential_url": 0,
+      "credential_url_parameter": 0
+    },
+    "findings": []
+  },
+  "finalScan": {
+    "scope": "all",
+    "textFileCount": 78,
+    "textPatternCounts": {
+      "library_file_identifier": 0,
+      "personal_absolute_path": 0,
+      "private_key_header": 0,
+      "provider_token": 0,
+      "jwt": 0,
+      "secret_literal_assignment": 0,
+      "email_literal": 16,
+      "credential_url": 0,
+      "credential_url_parameter": 0
+    },
+    "actionablePatternCounts": {
+      "library_file_identifier": 0,
+      "personal_absolute_path": 0,
+      "private_key_header": 0,
+      "provider_token": 0,
+      "jwt": 0,
+      "secret_literal_assignment": 0,
+      "email_literal": 0,
+      "credential_url": 0,
+      "credential_url_parameter": 0
+    },
+    "reviewedSuppressions": [
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 34,
+        "count": 1,
+        "lineSha256": "73b63a4a1f37c3bf6c34d61c03278db74b21dd14c62f44cd222d7af8bc34c8c1",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 36,
+        "count": 1,
+        "lineSha256": "5e00ab2e6cd086f3fe5db650c8d4d638781efafee364af4fc4ae2f5ff6e62fb5",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 38,
+        "count": 1,
+        "lineSha256": "2da4ef8775d59814b1d716026af35da991fec8802b4d09c5e3fee6550b8d1e2e",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 40,
+        "count": 1,
+        "lineSha256": "2a79c8f078edc3e458e068b238d95aebab15ff8485e8879d35d5c228ec6b16fd",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 42,
+        "count": 1,
+        "lineSha256": "fed6270a4d12df4f1e60f6f207468154be5d062f584b2a7c4ca01de88927dd50",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 102,
+        "count": 1,
+        "lineSha256": "d6f702d17d8236292b9d0b2cba4734d4792bf164bf769936400237ad2a1e3080",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 114,
+        "count": 1,
+        "lineSha256": "6fc7285ee4f9360912ed7328c2b5061c1706b031ce2958232fd349c7342d4dd4",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 126,
+        "count": 1,
+        "lineSha256": "093a29b8fd4268ded2d515965a596b73f18a6a30058bded3b5f78daa06fa77c9",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 138,
+        "count": 1,
+        "lineSha256": "848ce83f32266462d92837b38435ee9364f3777d9d1b260eb0ddca55681e0540",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 150,
+        "count": 1,
+        "lineSha256": "00b939d4bf6e000f35485c53a78fca49e282c806d1c700a3489fd06c20f86282",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 162,
+        "count": 1,
+        "lineSha256": "e33d8f473c773ab4f3280789ac87c4c901340aa5934a15e661e090f2892104f7",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 174,
+        "count": 1,
+        "lineSha256": "16903e0f9d3600c215af8eee83ee316145bb4e7e22a39d7affa3fdceb96f0b5e",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 186,
+        "count": 1,
+        "lineSha256": "cbda545a661dc61ff6865058f0e82f1740b7c25d9a8150d16d25d3aa3df7a485",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 198,
+        "count": 1,
+        "lineSha256": "ecf58879b7b82d90a6b90ae6f89e8c425f094def0e96e292885e9d3accecc126",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "shared/icons/asset-manifest.json",
+        "line": 210,
+        "count": 1,
+        "lineSha256": "93407f5785a300379c5f39b28f521334679f3aa931265d76bab07b8585035cba",
+        "reason": "Reviewed standard @2x iconset PNG filename in exact metadata line; generated asset exists in verified manifest."
+      },
+      {
+        "category": "email_literal",
+        "file": "windows/src/ResetNewsChecks.cs",
+        "line": 59,
+        "count": 1,
+        "lineSha256": "bfb7af2d3f607437bb9d005bc69e89869d28202c96a33581b3c04d8114522000",
+        "reason": "Reviewed explicit negative SafeLink URL-userinfo assertion; exact source context only."
+      }
+    ],
+    "findings": [],
+    "excludedStateEntries": [],
+    "uninspectedBinaryFiles": [],
+    "icoInspection": [
+      {
+        "file": "windows/src/assets/quota-app.ico",
+        "bytes": 316902,
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "frameCount": 10,
+        "pngMetadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "windows/src/assets/quota-tray-dark.ico",
+        "bytes": 316902,
+        "sha256": "d18bc6f54f13b20585ddb427d6495dd887e95fa7d54919ed05d893a271c027ba",
+        "frameCount": 10,
+        "pngMetadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "windows/src/assets/quota-tray-light.ico",
+        "bytes": 316902,
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a",
+        "frameCount": 10,
+        "pngMetadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      }
+    ],
+    "pngInspection": [
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_128x128.png",
+        "bytes": 3591,
+        "sha256": "f955f8dbb49848b0694bcda6097f1981d4634b7367bdd64ba0ee1d60a5d63d6b",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_128x128@2x.png",
+        "bytes": 7323,
+        "sha256": "471e93bcdc6a673eb8b30a6868eaedf2420d008168fdf58871362b2027bd24a5",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_16x16.png",
+        "bytes": 353,
+        "sha256": "e3dcf3337a127a4efcb67aa4daece4a7f7924ba078390fcad95de0576bef6b43",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_16x16@2x.png",
+        "bytes": 806,
+        "sha256": "9ad3a3bc70e83aeec29e3fb0bc78ee92a7a97e938a5ec5736075e1ba6249e3e3",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_256x256.png",
+        "bytes": 7323,
+        "sha256": "471e93bcdc6a673eb8b30a6868eaedf2420d008168fdf58871362b2027bd24a5",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_256x256@2x.png",
+        "bytes": 15845,
+        "sha256": "19c6f4ef52959ba5a5a241704bc8684287b2d81f021277f2ebeb75cfc51ca0ad",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_32x32.png",
+        "bytes": 806,
+        "sha256": "9ad3a3bc70e83aeec29e3fb0bc78ee92a7a97e938a5ec5736075e1ba6249e3e3",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_32x32@2x.png",
+        "bytes": 1729,
+        "sha256": "d4102c4dd25bf0901318536c81d7dfe9bafced2e5b67738fb931c7ade0649c37",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_512x512.png",
+        "bytes": 15845,
+        "sha256": "19c6f4ef52959ba5a5a241704bc8684287b2d81f021277f2ebeb75cfc51ca0ad",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-black.iconset/icon_512x512@2x.png",
+        "bytes": 35395,
+        "sha256": "2b57739905409f9d2aa9aac3371266d1d1cabd361d1915859f358174b8917d5e",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_128x128.png",
+        "bytes": 4286,
+        "sha256": "e35d8b7ae1d8c231d27ca3422e7ea47c828793a4004b97a314e0625358ad7e55",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_128x128@2x.png",
+        "bytes": 8755,
+        "sha256": "b63b7865cb5ac87a45243165055f36ea64831630b105c795078bd2b61c3d3dd2",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_16x16.png",
+        "bytes": 391,
+        "sha256": "95b4073ccc00fdb24e7fb8321a38dfe82bd7b8da2fe97972d0802fcbdc8e19f6",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_16x16@2x.png",
+        "bytes": 896,
+        "sha256": "7f0e7275e75833d129e39f317e67ab43551ac7a5363bd5eed1ddc495f2c208a0",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_256x256.png",
+        "bytes": 8755,
+        "sha256": "b63b7865cb5ac87a45243165055f36ea64831630b105c795078bd2b61c3d3dd2",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_256x256@2x.png",
+        "bytes": 18181,
+        "sha256": "3fd401aab6dbfad1d33c9d780f3a566bf564f044fa6810d0ab91ab50503c9797",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_32x32.png",
+        "bytes": 896,
+        "sha256": "7f0e7275e75833d129e39f317e67ab43551ac7a5363bd5eed1ddc495f2c208a0",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_32x32@2x.png",
+        "bytes": 1926,
+        "sha256": "67b144bb34f21ff6a94a4296d6723b1166a37a61c85422210f6cb872fcba5283",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_512x512.png",
+        "bytes": 18181,
+        "sha256": "3fd401aab6dbfad1d33c9d780f3a566bf564f044fa6810d0ab91ab50503c9797",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/macos/quota-mark-white.iconset/icon_512x512@2x.png",
+        "bytes": 38519,
+        "sha256": "07593bf377d6f63562d905a5eec99f1fb923e0348115109d06f724fa491c2fe0",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-1024.png",
+        "bytes": 35395,
+        "sha256": "2b57739905409f9d2aa9aac3371266d1d1cabd361d1915859f358174b8917d5e",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-128.png",
+        "bytes": 3591,
+        "sha256": "f955f8dbb49848b0694bcda6097f1981d4634b7367bdd64ba0ee1d60a5d63d6b",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-16.png",
+        "bytes": 353,
+        "sha256": "e3dcf3337a127a4efcb67aa4daece4a7f7924ba078390fcad95de0576bef6b43",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-18.png",
+        "bytes": 417,
+        "sha256": "8d7cf2df7ceb4724e60ff01d0c618740f87d5dc95fb970579f58a24229a34afb",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-20.png",
+        "bytes": 460,
+        "sha256": "2f80c983f227cdfe12c847bc6145cc68a876c3e9c066ef4f3e350cb048fff4d1",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-22.png",
+        "bytes": 532,
+        "sha256": "bc5eab937835a8a07e42c40957653b7b27f318124012c56d3044601863b46198",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-24.png",
+        "bytes": 574,
+        "sha256": "6c1c040890be9266779142476d4a62a6f6f299623f69aa91c570eb132594636c",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-256.png",
+        "bytes": 7323,
+        "sha256": "471e93bcdc6a673eb8b30a6868eaedf2420d008168fdf58871362b2027bd24a5",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-32.png",
+        "bytes": 806,
+        "sha256": "9ad3a3bc70e83aeec29e3fb0bc78ee92a7a97e938a5ec5736075e1ba6249e3e3",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-40.png",
+        "bytes": 990,
+        "sha256": "b12a1bcaa8a4cd0447c016a087865ef36e304fc1b7ac0205052f651a9cbade9b",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-48.png",
+        "bytes": 1224,
+        "sha256": "47b1cd9a8386d30126256010d9dbbac01c53c6afcc8416ae5de30925487ef5a8",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-512.png",
+        "bytes": 15845,
+        "sha256": "19c6f4ef52959ba5a5a241704bc8684287b2d81f021277f2ebeb75cfc51ca0ad",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/black/quota-mark-64.png",
+        "bytes": 1729,
+        "sha256": "d4102c4dd25bf0901318536c81d7dfe9bafced2e5b67738fb931c7ade0649c37",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-1024.png",
+        "bytes": 38519,
+        "sha256": "07593bf377d6f63562d905a5eec99f1fb923e0348115109d06f724fa491c2fe0",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-128.png",
+        "bytes": 4286,
+        "sha256": "e35d8b7ae1d8c231d27ca3422e7ea47c828793a4004b97a314e0625358ad7e55",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-16.png",
+        "bytes": 391,
+        "sha256": "95b4073ccc00fdb24e7fb8321a38dfe82bd7b8da2fe97972d0802fcbdc8e19f6",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-18.png",
+        "bytes": 466,
+        "sha256": "8a6fe47f8f87f316af6a63b8f5878586b293c8a48721529e86b30305735da7b3",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-20.png",
+        "bytes": 513,
+        "sha256": "6e2d53a404843c6d4a5bb66f7615d11b345a23a53f98f727c693430a6a330127",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-22.png",
+        "bytes": 593,
+        "sha256": "68fbfac4e1723245a6df60ae0a6739d84d246f0d7df89fd962520b259c576295",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-24.png",
+        "bytes": 648,
+        "sha256": "24ec052279a773fe2f89c53feae81200186e7079fc280911caef48e6ccfb80be",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-256.png",
+        "bytes": 8755,
+        "sha256": "b63b7865cb5ac87a45243165055f36ea64831630b105c795078bd2b61c3d3dd2",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-32.png",
+        "bytes": 896,
+        "sha256": "7f0e7275e75833d129e39f317e67ab43551ac7a5363bd5eed1ddc495f2c208a0",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-40.png",
+        "bytes": 1119,
+        "sha256": "f9c822206e5c5283c592e1172635b440ed271325cb19542348f8f97efa554598",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-48.png",
+        "bytes": 1380,
+        "sha256": "e7c0e6484871f0c20c8e6f49bd5930e4877185b7842be504117c8362a7b40d79",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-512.png",
+        "bytes": 18181,
+        "sha256": "3fd401aab6dbfad1d33c9d780f3a566bf564f044fa6810d0ab91ab50503c9797",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      },
+      {
+        "file": "shared/icons/png/white/quota-mark-64.png",
+        "bytes": 1926,
+        "sha256": "67b144bb34f21ff6a94a4296d6723b1166a37a61c85422210f6cb872fcba5283",
+        "metadataChunks": [],
+        "selectedBinaryPatternCounts": {
+          "personal_absolute_path": 0,
+          "private_key_header": 0,
+          "provider_token": 0,
+          "credential_url": 0
+        }
+      }
+    ],
+    "svgInspection": [
+      {
+        "file": "shared/icons/quota-mark-black.svg",
+        "bytes": 739,
+        "sha256": "92ab3f524fe6f8bd15f10173ce2a0704984f5b6f4635735233aa2cf9975875d8",
+        "elementCounts": {
+          "svg": 1,
+          "title": 1,
+          "desc": 1,
+          "g": 1,
+          "path": 2,
+          "circle": 1
+        },
+        "forbiddenMediaElements": [],
+        "hrefOrSrcAttributes": [],
+        "styleReferenceCount": 0,
+        "documentDeclarationCount": 0,
+        "geometryOnlyWithoutAssetReferences": true
+      },
+      {
+        "file": "shared/icons/quota-mark-white.svg",
+        "bytes": 739,
+        "sha256": "73d7e34e5b15bcdc51d3c02e0cc39f61ebe27057c5375abe20d2f9e50166a849",
+        "elementCounts": {
+          "svg": 1,
+          "title": 1,
+          "desc": 1,
+          "g": 1,
+          "path": 2,
+          "circle": 1
+        },
+        "forbiddenMediaElements": [],
+        "hrefOrSrcAttributes": [],
+        "styleReferenceCount": 0,
+        "documentDeclarationCount": 0,
+        "geometryOnlyWithoutAssetReferences": true
+      }
+    ],
+    "readErrors": [],
+    "secretValuesPrinted": false,
+    "limitations": [
+      "Pattern matching does not prove absence of every secret.",
+      "Binary pixels are not reviewed by this scanner.",
+      "Third-party redistribution rights require separate review.",
+      "Real state and credential files are listed but never read.",
+      "This scanner and its generated reports are excluded to prevent self-matches."
+    ]
+  },
+  "limitations": [
+    "Pattern matching cannot establish that every conceivable secret is absent.",
+    "Media inspection covers metadata, selected string patterns, hashes and SVG structure; it is not an unrestricted image-content privacy guarantee.",
+    "The private reference basename and hash are retained only as explicitly authorized provenance; no personal absolute path is included.",
+    "Overall project licensing and public GitHub publication remain separate decisions."
+  ],
+  "status": "FINAL_FROZEN_REPOSITORY_REVIEW_COMPLETE",
+  "freeze": {
+    "productionSourceMatched": "audit/baseline.json",
+    "sourceCount": 34,
+    "sourceHashesVerified": true,
+    "documentAndTestFixtureFreezeConfirmed": true,
+    "testReviewerConfirmation": "The public README, CardFreeze110 fixture, adapted runner and tests audits were frozen before the final sweep.",
+    "exeSha256": "f0f7090202bf196ce7a969bdc3b4c1e03d66181182798c9b591d1c8a6fa709f7"
+  },
+  "integrity": {
+    "sourceCount": 34,
+    "allSourceHashesMatchFrozenBaseline": true,
+    "assetHashesMatchFrozenBaseline": true,
+    "exeSha256": "f0f7090202bf196ce7a969bdc3b4c1e03d66181182798c9b591d1c8a6fa709f7",
+    "baselineSha256": "5eb135251ae7df6fffdba8a78955f59a7f27c99e4fea93d3689ff33f670e6d3d",
+    "repositoryFileCount": 128,
+    "scannerSha256": "044d7c863225df0f207a59892a2c60ebdd85dfe8d926d7217ed47cf816a366d4",
+    "assetHashGrouping": {
+      "trayHashes": {
+        "quota-tray-dark.ico": "d18bc6f54f13b20585ddb427d6495dd887e95fa7d54919ed05d893a271c027ba",
+        "quota-tray-light.ico": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a"
+      },
+      "programIcon": {
+        "file": "quota-app.ico",
+        "sha256": "ca7bca472a415694ddcc5a8d37ecaeab15d2bef3bfff40b7c123bc33bf37428a"
+      }
+    },
+    "assetComparisonNote": "The frozen baseline records two tray ICOs and a separate program ICO; all three are checked in their respective groups."
+  }
+}
+

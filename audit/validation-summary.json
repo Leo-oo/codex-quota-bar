@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "programVersion": "0.11.10.0",
+  "nativeCompilationPassed": true,
+  "normalExeSha256": "f0f7090202bf196ce7a969bdc3b4c1e03d66181182798c9b591d1c8a6fa709f7",
+  "productionSourcesFrozenAndUnchanged": true,
+  "suites": {
+    "newsUnread": {
+      "pass": 79,
+      "fail": 0
+    },
+    "icon": {
+      "pass": 247,
+      "fail": 0
+    },
+    "history": {
+      "pass": 22,
+      "fail": 0
+    },
+    "historyMigration": {
+      "pass": 8,
+      "fail": 0
+    },
+    "historyLayout": {
+      "pass": 12,
+      "fail": 0
+    },
+    "cardNative": {
+      "accepted": true,
+      "pass": 46,
+      "fail": 0,
+      "report": "audit/tests-card110-validation.json"
+    }
+  },
+  "finalAcceptedAssertionCount": 414,
+  "originalCardFixtureInitialRun": {
+    "pass": 13,
+    "fail": 2,
+    "nativeScenariosCompleted": 2,
+    "nativeScenariosExpected": 8,
+    "cause": "Native row center did not hit the own card; all other recorded paint/visibility/geometry gates passed."
+  },
+  "baseline119Control": "Same original fixture and source hashes: same native-hit timeout; source and prior delivery remained unchanged.",
+  "cardEnvironmentAdjustment": "Own-window positive opens only: non-activating topmost setup. Original assertions, covering-window negative case, foreground invariant and timeout retained.",
+  "layoutEvidence": "125% light/dark: same native WM_PRINT backend for independent complete-text raster; 0 glyph pixel mismatch, history/footer/link fully within client.",
+  "firstLayoutOracleFailure": "Retained privately; mismatched bitmap graphics backend corrected in test reference only; production unchanged.",
+  "normalApplicationStarted": false,
+  "realCodexObservedOrOperated": false,
+  "realAccountFilesRead": false,
+  "privateApiCalled": false,
+  "userInstallationChanged": false,
+  "windowsPermissionsChanged": false,
+  "githubPublished": false,
+  "overallMitGranted": false,
+  "notRun": [
+    "Actual target-window following",
+    "Real account data chain",
+    "Explorer tray/DPI changes",
+    "Clean-machine/ARM/SmartScreen acceptance",
+    "Mac operations"
+  ]
+}

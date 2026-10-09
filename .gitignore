@@ -1,0 +1,42 @@
+# Build and test products
+**/build/
+**/.test-output/
+**/bin/
+**/obj/
+*.exe
+*.dll
+*.pdb
+*.zip
+*.log
+__pycache__/
+*.pyc
+
+# Runtime and private configuration
+**/runtime/
+**/private-validation/
+**/.env
+**/.env.*
+**/auth.json
+**/credentials.json
+**/config.local.*
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# Local tools/editor state
+.vs/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Distribution assets and local publication tools
+*.dmg
+*.app/
+*.pkg
+*.sqlite
+*.sqlite3
+**/dist/
+**/.build/
+**/DerivedData/
+**/private-input/
+**/private-controls/

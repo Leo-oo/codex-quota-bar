@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "programVersion": "0.11.10.0",
+  "platform": "x64",
+  "sourceCount": 34,
+  "sourceHashesMatchFrozenBaseline": true,
+  "sourceBaselineSha256": "5eb135251ae7df6fffdba8a78955f59a7f27c99e4fea93d3689ff33f670e6d3d",
+  "buildScriptSha256": "1e8819aafb7a8bd0c1ee90b149ea6870b99be3b658a38d7b43597aebce0041af",
+  "normalBuildCompleted": true,
+  "initialSandboxCompile": "CS0016; output access denied",
+  "reviewedRetry": "Same command, source, environment and output path; completed with exit0.",
+  "compiler": "system .NET Framework64 v4.0.30319/csc.exe",
+  "command": "windows/src/build.ps1 -OutputDirectory <private-validation>/build",
+  "output": {
+    "name": "CodexUsageMini.exe",
+    "bytes": 1326592,
+    "sha256": "f0f7090202bf196ce7a969bdc3b4c1e03d66181182798c9b591d1c8a6fa709f7",
+    "fileVersion": "0.11.10.0",
+    "productVersion": "0.11.10.0"
+  },
+  "configSha256": "d9ebb20c2be7d37463762d566146e4e9ddab2cf2ce33717172e8d186693d5bba",
+  "nativeProgramIcon": "quota-app.ico",
+  "managedResourceAliases": [
+    "QuotaBar.Tray.Dark.ico",
+    "QuotaBar.Tray.Light.ico"
+  ],
+  "normalApplicationStarted": false,
+  "realCodexObservedOrOperated": false,
+  "accountFilesRead": false,
+  "macAccessed": false,
+  "signatureAdded": false,
+  "githubOperationsPerformed": false
+}
