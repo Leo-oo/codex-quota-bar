@@ -1,6 +1,4 @@
-[README (4) 22a5c68610f182c6b88b01e33005bc28.md](https://github.com/user-attachments/files/33262287/README.4.22a5c68610f182c6b88b01e33005bc28.md)
-
-# README (4)
+# README
 
 # Codex 额度条
 
@@ -15,9 +13,10 @@
 
 ## 功能演示
 
-[功能演示.mp4](%E5%8A%9F%E8%83%BD%E6%BC%94%E7%A4%BA.mp4)
+https://github.com/user-attachments/assets/f26bca81-a505-448c-b3aa-96577409f122
 
-[完整功能设计稿.png](%E5%AE%8C%E6%95%B4%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1%E7%A8%BF.png)
+<img width="2160" height="3456" alt="完整功能设计稿" src="https://github.com/user-attachments/assets/c461ee72-a058-40b9-a790-45ceb4c75965" />
+
 
 ## 下载
 
