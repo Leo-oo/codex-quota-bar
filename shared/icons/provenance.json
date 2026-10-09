@@ -1,0 +1,26 @@
+{
+  "source": "Authored SVG geometry reconstructing the user-selected option-2 reference.",
+  "reference": {
+    "filename": "ChatGPT 图像 2026年10月9日 03_24_48.png",
+    "sha256": "cf6bfafb80b8dc13f68f2f26d9d2d0f762fc5aa2bca2d435dacaaeac52f7ad40",
+    "pixelDimensions": [
+      1254,
+      1254
+    ],
+    "selection": "upper-right quadrant, option 2",
+    "actualPixelsViewed": true,
+    "referencePixelsRedistributed": false
+  },
+  "derivation": "Continuous arc with round caps, filled circular hub, upper-right 45-degree needle; no extracted client mark or old badge.",
+  "renderer": {
+    "engine": "Python/Pillow analytic stroke geometry",
+    "pillowVersion": "12.3.0",
+    "geometrySharedWithSVG": true,
+    "supersampling": "16x through128;8x256;4x512/1024",
+    "filter": "Lanczos alpha only; straight RGB remains exact black or white"
+  },
+  "license": "Project-level licensing handled separately; this file does not grant rights to external reference artwork.",
+  "noIcnsGenerated": true,
+  "macosRuntimeAccessed": false,
+  "normalApplicationRun": false
+}

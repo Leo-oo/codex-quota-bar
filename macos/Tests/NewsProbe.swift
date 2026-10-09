@@ -1,0 +1,2 @@
+import Foundation
+@main struct NewsProbe {static func main() throws {let s=try NewsParser.parse(Data(contentsOf:URL(fileURLWithPath:CommandLine.arguments[1])));let report:[String:Any] = ["parse":"success","currentItemCount":s.items.count,"historyPresent":s.history != nil,"checkedAt":s.checked,"day":s.day,"displayTypes":s.items.map{$0.title},"displayStates":s.items.map{$0.state}];print(String(data:try JSONSerialization.data(withJSONObject:report,options:.prettyPrinted),encoding:.utf8)!)} }

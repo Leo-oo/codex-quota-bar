@@ -1,0 +1,44 @@
+{
+  "viewBox": [
+    0,
+    0,
+    100,
+    100
+  ],
+  "canonicalCenter": [
+    50.0,
+    58.0
+  ],
+  "arcRadius": 41.0,
+  "strokeWidth": 8.0,
+  "arcStartDegrees": 140.0,
+  "arcSweepDegrees": 260.0,
+  "arcEndDegrees": 40,
+  "strokeLinecap": "round",
+  "hubRadius": 8.0,
+  "hubFilled": true,
+  "needleStart": [
+    50,
+    58
+  ],
+  "needleEnd": [
+    70,
+    38
+  ],
+  "needleDegrees": -45,
+  "artboardTranslation": [
+    0,
+    -0.6771459985740549
+  ],
+  "analyticVisibleBounds": [
+    5,
+    12.322854001425945,
+    95,
+    87.67714599857405
+  ],
+  "centering": "Translation only; preserve relative primitive geometry and proportions.",
+  "colors": {
+    "black": "#000000",
+    "white": "#FFFFFF"
+  }
+}
